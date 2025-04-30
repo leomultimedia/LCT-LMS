@@ -33,13 +33,13 @@
 ### 1.1 Functional Architecture Diagram
 ```mermaid
 graph TD
-    subgraph User Interface
+    subgraph UserInterface["User Interface"]
         Web[Web Portal]
         Mobile[Mobile App]
         Admin[Admin Console]
     end
 
-    subgraph Core Services
+    subgraph CoreServices["Core Services"]
         Auth[Authentication]
         Course[Course Management]
         Content[Content Management]
@@ -47,17 +47,24 @@ graph TD
         Analytics[Analytics Engine]
     end
 
-    subgraph Support Services
+    subgraph SupportServices["Support Services"]
         Notification[Notification Service]
         Payment[Payment Gateway]
         Storage[File Storage]
         Integration[External Integrations]
     end
 
-    Web --> Core
-    Mobile --> Core
-    Admin --> Core
-    Core --> Support
+    Web --> Auth
+    Mobile --> Auth
+    Admin --> Auth
+    Auth --> Course
+    Auth --> Content
+    Auth --> Assessment
+    Auth --> Analytics
+    Course --> Notification
+    Content --> Storage
+    Assessment --> Analytics
+    Analytics --> Integration
 ```
 
 ## 2. User Roles and Permissions
@@ -119,8 +126,8 @@ classDiagram
         +revokeRole()
     }
     
-    User "1" -- "1" UserProfile
-    User "1" -- "1" UserRole
+    User "1" *-- "1" UserProfile : has
+    User "1" *-- "1" UserRole : has
 ```
 
 ### 3.2 Course Management
@@ -155,8 +162,8 @@ classDiagram
         +completeLesson()
     }
     
-    Course "1" -- "*" Module
-    Module "1" -- "*" Lesson
+    Course "1" *-- "*" Module : contains
+    Module "1" *-- "*" Lesson : contains
 ```
 
 ### 3.3 Content Management
@@ -190,8 +197,8 @@ classDiagram
         +downloadDocument()
     }
     
-    Content <|-- Media
-    Content <|-- Document
+    Content <|-- Media : extends
+    Content <|-- Document : extends
 ```
 
 ### 3.4 Assessment System
@@ -224,8 +231,8 @@ classDiagram
         +generateFeedback()
     }
     
-    Assessment "1" -- "*" Question
-    Assessment "1" -- "1" Result
+    Assessment "1" *-- "*" Question : contains
+    Assessment "1" *-- "1" Result : has
 ```
 
 ## 4. Use Case Specifications
@@ -460,9 +467,9 @@ classDiagram
         +validatePrerequisite()
     }
     
-    LearningPath "1" -- "*" Course
-    Course "1" -- "*" Module
-    LearningPath "1" -- "*" Prerequisite
+    LearningPath "1" *-- "*" Course : contains
+    Course "1" *-- "*" Module : contains
+    LearningPath "1" *-- "*" Prerequisite : has
 ```
 
 #### 9.1.2 Analytics and Reporting
@@ -501,9 +508,9 @@ classDiagram
         +collectData()
     }
     
-    Analytics "1" -- "*" Metric
-    Analytics "1" -- "*" Report
-    Report "1" -- "*" DataPoint
+    Analytics "1" *-- "*" Metric : has
+    Analytics "1" *-- "*" Report : generates
+    Report "1" *-- "*" DataPoint : contains
 ```
 
 ### 9.2 Extended Use Case Diagrams
