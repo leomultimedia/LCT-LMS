@@ -239,57 +239,57 @@ classDiagram
 
 ### 4.1 User Management Use Cases
 ```mermaid
-useCaseDiagram
-    actor User
-    actor Admin
-    actor System
-    
-    User --> (Register Account)
-    User --> (Login)
-    User --> (Update Profile)
-    User --> (Reset Password)
-    Admin --> (Manage Users)
-    Admin --> (Assign Roles)
-    System --> (Send Notifications)
-    System --> (Maintain Audit Log)
+graph LR
+    User((User))
+    Admin((Admin))
+    System((System))
+
+    User --> RA[Register Account]
+    User --> L[Login]
+    User --> UP[Update Profile]
+    User --> RP[Reset Password]
+    Admin --> MU[Manage Users]
+    Admin --> AR[Assign Roles]
+    System --> SN[Send Notifications]
+    System --> MA[Maintain Audit Log]
 ```
 
 ### 4.2 Course Management Use Cases
 ```mermaid
-useCaseDiagram
-    actor Instructor
-    actor Student
-    actor Admin
-    actor System
-    
-    Instructor --> (Create Course)
-    Instructor --> (Manage Content)
-    Instructor --> (Grade Assignments)
-    Student --> (Enroll in Course)
-    Student --> (Access Content)
-    Student --> (Submit Assignments)
-    Admin --> (Approve Courses)
-    System --> (Track Progress)
-    System --> (Generate Reports)
+graph LR
+    Instructor((Instructor))
+    Student((Student))
+    Admin((Admin))
+    System((System))
+
+    Instructor --> CC[Create Course]
+    Instructor --> MC[Manage Content]
+    Instructor --> GA[Grade Assignments]
+    Student --> EC[Enroll in Course]
+    Student --> AC[Access Content]
+    Student --> SA[Submit Assignments]
+    Admin --> ApC[Approve Courses]
+    System --> TP[Track Progress]
+    System --> GR[Generate Reports]
 ```
 
 ### 4.3 Content Management Use Cases
 ```mermaid
-useCaseDiagram
-    actor ContentManager
-    actor Instructor
-    actor Student
-    actor System
-    
-    ContentManager --> (Upload Content)
-    ContentManager --> (Organize Content)
-    ContentManager --> (Manage Versions)
-    Instructor --> (Create Content)
-    Instructor --> (Share Content)
-    Student --> (Access Content)
-    Student --> (Download Content)
-    System --> (Track Usage)
-    System --> (Optimize Delivery)
+graph LR
+    ContentManager((Content Manager))
+    Instructor((Instructor))
+    Student((Student))
+    System((System))
+
+    ContentManager --> UC[Upload Content]
+    ContentManager --> OC[Organize Content]
+    ContentManager --> MV[Manage Versions]
+    Instructor --> CC[Create Content]
+    Instructor --> SC[Share Content]
+    Student --> AC[Access Content]
+    Student --> DC[Download Content]
+    System --> TU[Track Usage]
+    System --> OD[Optimize Delivery]
 ```
 
 ## 5. Functional Requirements
@@ -517,122 +517,122 @@ classDiagram
 
 #### 9.2.1 Learning Path Management Use Cases
 ```mermaid
-useCaseDiagram
-    actor Student
-    actor Instructor
-    actor Admin
-    actor System
-    
-    Student --> (View Learning Path)
-    Student --> (Track Progress)
-    Student --> (Request Certification)
-    Instructor --> (Create Learning Path)
-    Instructor --> (Modify Learning Path)
-    Instructor --> (Monitor Progress)
-    Admin --> (Approve Learning Path)
-    Admin --> (Manage Certifications)
-    System --> (Track Completion)
-    System --> (Generate Certificates)
-    System --> (Send Notifications)
+graph LR
+    Student((Student))
+    Instructor((Instructor))
+    Admin((Admin))
+    System((System))
+
+    Student --> VLP[View Learning Path]
+    Student --> TP[Track Progress]
+    Student --> RC[Request Certification]
+    Instructor --> CLP[Create Learning Path]
+    Instructor --> MLP[Modify Learning Path]
+    Instructor --> MP[Monitor Progress]
+    Admin --> ALP[Approve Learning Path]
+    Admin --> MC[Manage Certifications]
+    System --> TC[Track Completion]
+    System --> GC[Generate Certificates]
+    System --> SN[Send Notifications]
 ```
 
 #### 9.2.2 Analytics and Reporting Use Cases
 ```mermaid
-useCaseDiagram
-    actor Admin
-    actor Instructor
-    actor Student
-    actor System
-    
-    Admin --> (View System Analytics)
-    Admin --> (Generate Reports)
-    Admin --> (Export Data)
-    Instructor --> (View Course Analytics)
-    Instructor --> (Track Student Progress)
-    Instructor --> (Generate Course Reports)
-    Student --> (View Personal Progress)
-    Student --> (Access Performance Reports)
-    System --> (Collect Analytics)
-    System --> (Process Data)
-    System --> (Generate Insights)
+graph LR
+    Admin((Admin))
+    Instructor((Instructor))
+    Student((Student))
+    System((System))
+
+    Admin --> VSA[View System Analytics]
+    Admin --> GR[Generate Reports]
+    Admin --> ED[Export Data]
+    Instructor --> VCA[View Course Analytics]
+    Instructor --> TSP[Track Student Progress]
+    Instructor --> GCR[Generate Course Reports]
+    Student --> VPP[View Personal Progress]
+    Student --> APR[Access Performance Reports]
+    System --> CA[Collect Analytics]
+    System --> PD[Process Data]
+    System --> GI[Generate Insights]
 ```
 
 ### 9.3 Component Architecture Diagrams
 
 #### 9.3.1 Core System Components
 ```mermaid
-componentDiagram
-    component "User Interface" {
-        component "Web Portal"
-        component "Mobile App"
-        component "Admin Console"
-    }
-    
-    component "Core Services" {
-        component "Authentication Service"
-        component "Course Service"
-        component "Content Service"
-        component "Assessment Service"
-    }
-    
-    component "Data Services" {
-        component "User Database"
-        component "Content Storage"
-        component "Analytics Database"
-    }
-    
-    component "Integration Services" {
-        component "SSO Integration"
-        component "Payment Gateway"
-        component "Email Service"
-    }
-    
-    "Web Portal" --> "Authentication Service"
-    "Mobile App" --> "Authentication Service"
-    "Admin Console" --> "Authentication Service"
-    "Authentication Service" --> "User Database"
-    "Course Service" --> "Content Storage"
-    "Assessment Service" --> "Analytics Database"
-    "Core Services" --> "Integration Services"
+graph TB
+    subgraph UI[User Interface]
+        WP[Web Portal]
+        MA[Mobile App]
+        AC[Admin Console]
+    end
+
+    subgraph CS[Core Services]
+        AS[Authentication Service]
+        COS[Course Service]
+        CNS[Content Service]
+        ASS[Assessment Service]
+    end
+
+    subgraph DS[Data Services]
+        UD[User Database]
+        CS[Content Storage]
+        AD[Analytics Database]
+    end
+
+    subgraph IS[Integration Services]
+        SSO[SSO Integration]
+        PG[Payment Gateway]
+        ES[Email Service]
+    end
+
+    WP --> AS
+    MA --> AS
+    AC --> AS
+    AS --> UD
+    COS --> CS
+    ASS --> AD
+    CS --> IS
 ```
 
 #### 9.3.2 Microservices Architecture
 ```mermaid
-componentDiagram
-    component "API Gateway" {
-        component "Routing"
-        component "Rate Limiting"
-        component "Authentication"
-    }
-    
-    component "User Service" {
-        component "User Management"
-        component "Profile Management"
-        component "Role Management"
-    }
-    
-    component "Course Service" {
-        component "Course Management"
-        component "Enrollment"
-        component "Progress Tracking"
-    }
-    
-    component "Content Service" {
-        component "Content Management"
-        component "Media Processing"
-        component "Storage"
-    }
-    
-    component "Assessment Service" {
-        component "Question Bank"
-        component "Grading"
-        component "Analytics"
-    }
-    
-    "API Gateway" --> "User Service"
-    "API Gateway" --> "Course Service"
-    "API Gateway" --> "Content Service"
-    "API Gateway" --> "Assessment Service"
+graph TB
+    subgraph AG[API Gateway]
+        RT[Routing]
+        RL[Rate Limiting]
+        AU[Authentication]
+    end
+
+    subgraph US[User Service]
+        UM[User Management]
+        PM[Profile Management]
+        RM[Role Management]
+    end
+
+    subgraph CS[Course Service]
+        CM[Course Management]
+        EN[Enrollment]
+        PT[Progress Tracking]
+    end
+
+    subgraph CNS[Content Service]
+        CTM[Content Management]
+        MP[Media Processing]
+        ST[Storage]
+    end
+
+    subgraph AS[Assessment Service]
+        QB[Question Bank]
+        GR[Grading]
+        AN[Analytics]
+    end
+
+    AG --> US
+    AG --> CS
+    AG --> CNS
+    AG --> AS
 ```
 
 ### 9.4 Workflow Sequence Diagrams
