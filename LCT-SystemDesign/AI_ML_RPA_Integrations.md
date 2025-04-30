@@ -82,8 +82,14 @@ graph TD
     DataPrep --> Training
     Training --> Inference
     Inference --> Monitoring
-    Processed --> ML Models
-    ML Models --> Results
+    Processed --> Predict
+    Processed --> Classify
+    Processed --> Cluster
+    Processed --> Anomaly
+    Predict --> Results
+    Classify --> Results
+    Cluster --> Results
+    Anomaly --> Results
 ```
 
 ### ML Use Cases and Solutions

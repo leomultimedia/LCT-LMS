@@ -252,7 +252,39 @@ sequenceDiagram
     Analytics-->>Storage: Store Metrics
 ```
 
-## 11. Assessment System Flow
+## 11. AI/ML Integration Flow
+
+```mermaid
+graph TD
+    subgraph Data Collection
+        UserData[User Data]
+        CourseData[Course Data]
+        PerformanceData[Performance Data]
+    end
+
+    subgraph Data Processing
+        Clean[Data Cleaning]
+        Transform[Data Transformation]
+        Feature[Feature Engineering]
+    end
+
+    subgraph ML Models
+        Recommend[Recommendation Model]
+        Predict[Performance Prediction]
+        Personalize[Content Personalization]
+    end
+
+    UserData --> Clean
+    CourseData --> Clean
+    PerformanceData --> Clean
+    Clean --> Transform
+    Transform --> Feature
+    Feature --> Recommend
+    Feature --> Predict
+    Feature --> Personalize
+```
+
+## 12. Assessment System Flow
 
 ```mermaid
 graph TD
@@ -293,7 +325,7 @@ graph TD
     Review --> Feedback
 ```
 
-## 12. Notification System Flow
+## 13. Notification System Flow
 
 ```mermaid
 sequenceDiagram
@@ -312,7 +344,7 @@ sequenceDiagram
     System->>Notification: Update Status
 ```
 
-## 13. Learning Path Structure
+## 14. Learning Path Structure
 
 ```mermaid
 graph TD
@@ -332,7 +364,7 @@ graph TD
     Course3 --> Project
 ```
 
-## 14. System Monitoring Flow
+## 15. System Monitoring Flow
 
 ```mermaid
 graph TD
@@ -361,7 +393,7 @@ graph TD
     Alerts --> Logging
 ```
 
-## 15. Backup and Recovery Flow
+## 16. Backup and Recovery Flow
 
 ```mermaid
 sequenceDiagram
@@ -382,7 +414,7 @@ sequenceDiagram
     Recovery-->>System: Restore Complete
 ```
 
-## 16. Content Management System Flow
+## 17. Content Management System Flow
 
 ```mermaid
 graph TD
@@ -420,7 +452,7 @@ graph TD
     Draft --> Resource
 ```
 
-## 17. Discussion Forum Flow
+## 18. Discussion Forum Flow
 
 ```mermaid
 sequenceDiagram
@@ -443,7 +475,7 @@ sequenceDiagram
     Frontend-->>User: Show Post
 ```
 
-## 18. Progress Tracking System
+## 19. Progress Tracking System
 
 ```mermaid
 graph TD
@@ -478,7 +510,7 @@ graph TD
     Engagement --> Recommend
 ```
 
-## 19. Payment Processing Flow
+## 20. Payment Processing Flow
 
 ```mermaid
 sequenceDiagram
@@ -508,7 +540,7 @@ sequenceDiagram
     end
 ```
 
-## 20. Content Delivery Network (CDN) Flow
+## 21. Content Delivery Network (CDN) Flow
 
 ```mermaid
 graph TD
@@ -542,7 +574,7 @@ graph TD
     API --> Routing
 ```
 
-## 21. User Onboarding Flow
+## 22. User Onboarding Flow
 
 ```mermaid
 sequenceDiagram
@@ -572,7 +604,7 @@ sequenceDiagram
     Frontend-->>User: Show Dashboard
 ```
 
-## 22. Search and Discovery Flow
+## 23. Search and Discovery Flow
 
 ```mermaid
 graph TD
@@ -606,7 +638,7 @@ graph TD
     ResourceSearch --> History
 ```
 
-## 23. Analytics Data Collection Flow
+## 24. Analytics Data Collection Flow
 
 ```mermaid
 sequenceDiagram
@@ -628,7 +660,7 @@ sequenceDiagram
     Dashboard-->>User: Show Analytics
 ```
 
-## 24. Multi-Tenant Architecture Flow
+## 25. Multi-Tenant Architecture Flow
 
 ```mermaid
 graph TD
@@ -662,7 +694,7 @@ graph TD
     Individual --> Access
 ```
 
-## 25. Integration Flow with External Systems
+## 26. Integration Flow with External Systems
 
 ```mermaid
 sequenceDiagram
