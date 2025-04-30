@@ -751,4 +751,102 @@ graph TD
    - Reserved instances
    - Spot instances
 
-This low-cost MVP stack provides a secure, scalable, and cost-effective solution while maintaining enterprise-grade features and security. The stack leverages free and open-source technologies where possible, with strategic use of cloud services' free tiers and optimization techniques to minimize costs. 
+This low-cost MVP stack provides a secure, scalable, and cost-effective solution while maintaining enterprise-grade features and security. The stack leverages free and open-source technologies where possible, with strategic use of cloud services' free tiers and optimization techniques to minimize costs.
+
+## 12. Tools and Vendor Links
+
+### 12.1 Frontend Technologies
+- **Blazor**: [Microsoft Blazor Documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/)
+- **Fluxor**: [Fluxor GitHub Repository](https://github.com/mrpmorris/fluxor)
+- **React.js**: [React Official Documentation](https://reactjs.org/)
+- **Angular**: [Angular Official Documentation](https://angular.io/)
+- **Vue.js**: [Vue.js Official Documentation](https://vuejs.org/)
+
+### 12.2 Backend Technologies
+- **.NET Core**: [.NET Documentation](https://learn.microsoft.com/en-us/dotnet/)
+- **SQL Server**: [Microsoft SQL Server](https://www.microsoft.com/en-us/sql-server)
+- **Azure Cosmos DB**: [Azure Cosmos DB Documentation](https://learn.microsoft.com/en-us/azure/cosmos-db/)
+- **PostgreSQL**: [PostgreSQL Official Documentation](https://www.postgresql.org/docs/)
+- **MongoDB**: [MongoDB Documentation](https://www.mongodb.com/docs/)
+
+### 12.3 Mobile Technologies
+- **.NET MAUI**: [.NET MAUI Documentation](https://learn.microsoft.com/en-us/dotnet/maui/)
+- **Xamarin.Forms**: [Xamarin Documentation](https://learn.microsoft.com/en-us/xamarin/)
+- **React Native**: [React Native Documentation](https://reactnative.dev/)
+- **Flutter**: [Flutter Documentation](https://flutter.dev/docs)
+
+### 12.4 Cloud Infrastructure
+- **Azure**: [Microsoft Azure](https://azure.microsoft.com/)
+- **AWS**: [Amazon Web Services](https://aws.amazon.com/)
+- **Google Cloud**: [Google Cloud Platform](https://cloud.google.com/)
+
+### 12.5 DevOps Tools
+- **Azure DevOps**: [Azure DevOps Documentation](https://learn.microsoft.com/en-us/azure/devops/)
+- **GitHub Actions**: [GitHub Actions Documentation](https://docs.github.com/en/actions)
+- **Jenkins**: [Jenkins Documentation](https://www.jenkins.io/doc/)
+- **TeamCity**: [TeamCity Documentation](https://www.jetbrains.com/teamcity/documentation/)
+
+### 12.6 Monitoring and Logging
+- **Application Insights**: [Azure Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview)
+- **Azure Log Analytics**: [Azure Log Analytics](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-overview)
+- **Prometheus**: [Prometheus Documentation](https://prometheus.io/docs/)
+- **Grafana**: [Grafana Documentation](https://grafana.com/docs/)
+- **Datadog**: [Datadog Documentation](https://docs.datadoghq.com/)
+
+### 12.7 Security Tools
+- **Azure Security Center**: [Azure Security Center Documentation](https://learn.microsoft.com/en-us/azure/security-center/)
+- **Microsoft Defender**: [Microsoft Defender Documentation](https://learn.microsoft.com/en-us/microsoft-365/security/defender/)
+- **OWASP Tools**: [OWASP Tools](https://owasp.org/www-project-tools/)
+- **SonarQube**: [SonarQube Documentation](https://docs.sonarqube.org/latest/)
+
+### 12.8 AI/ML Integration
+- **Azure ML**: [Azure Machine Learning](https://learn.microsoft.com/en-us/azure/machine-learning/)
+- **ML.NET**: [ML.NET Documentation](https://learn.microsoft.com/en-us/dotnet/machine-learning/)
+- **TensorFlow**: [TensorFlow Documentation](https://www.tensorflow.org/guide)
+- **PyTorch**: [PyTorch Documentation](https://pytorch.org/docs/stable/index.html)
+
+### 12.9 RPA Integration
+- **Power Automate**: [Power Automate Documentation](https://learn.microsoft.com/en-us/power-automate/)
+- **UiPath**: [UiPath Documentation](https://docs.uipath.com/)
+- **Automation Anywhere**: [Automation Anywhere Documentation](https://docs.automationanywhere.com/)
+- **Blue Prism**: [Blue Prism Documentation](https://portal.blueprism.com/)
+
+### 12.10 Free and Open Source Tools
+- **React.js**: [React.js GitHub](https://github.com/facebook/react)
+- **Node.js**: [Node.js Documentation](https://nodejs.org/en/docs/)
+- **PostgreSQL**: [PostgreSQL Downloads](https://www.postgresql.org/download/)
+- **Prometheus**: [Prometheus GitHub](https://github.com/prometheus/prometheus)
+- **Grafana**: [Grafana GitHub](https://github.com/grafana/grafana)
+- **OWASP Tools**: [OWASP GitHub](https://github.com/OWASP)
+
+### 12.11 Cloud Free Tiers
+- **Azure Free Tier**: [Azure Free Account](https://azure.microsoft.com/en-us/free/)
+- **AWS Free Tier**: [AWS Free Tier](https://aws.amazon.com/free/)
+- **Google Cloud Free Tier**: [Google Cloud Free Tier](https://cloud.google.com/free)
+- **GitHub Free**: [GitHub Free](https://github.com/pricing)
+
+### 12.12 Development Tools
+- **Visual Studio**: [Visual Studio Downloads](https://visualstudio.microsoft.com/downloads/)
+- **Visual Studio Code**: [VS Code Documentation](https://code.visualstudio.com/docs)
+- **Azure Data Studio**: [Azure Data Studio](https://learn.microsoft.com/en-us/sql/azure-data-studio/)
+- **Postman**: [Postman Documentation](https://learning.postman.com/docs/)
+
+### 12.13 Database Tools
+- **Azure Data Studio**: [Azure Data Studio Documentation](https://learn.microsoft.com/en-us/sql/azure-data-studio/)
+- **SQL Server Management Studio**: [SSMS Documentation](https://learn.microsoft.com/en-us/sql/ssms/sql-server-management-studio-ssms)
+- **MongoDB Compass**: [MongoDB Compass](https://www.mongodb.com/products/compass)
+- **pgAdmin**: [pgAdmin Documentation](https://www.pgadmin.org/docs/)
+
+### 12.14 Testing Tools
+- **Azure Test Plans**: [Azure Test Plans](https://learn.microsoft.com/en-us/azure/devops/test/overview)
+- **Selenium**: [Selenium Documentation](https://www.selenium.dev/documentation/)
+- **Postman**: [Postman Testing](https://learning.postman.com/docs/writing-scripts/test-scripts/)
+- **SonarQube**: [SonarQube Quality Gates](https://docs.sonarqube.org/latest/user-guide/quality-gates/)
+
+### 12.15 Documentation Tools
+- **Azure DevOps Wiki**: [Azure DevOps Wiki](https://learn.microsoft.com/en-us/azure/devops/project/wiki/)
+- **GitHub Wiki**: [GitHub Wiki](https://docs.github.com/en/communities/documenting-your-project-with-wikis)
+- **Markdown**: [Markdown Guide](https://www.markdownguide.org/)
+- **Mermaid**: [Mermaid Documentation](https://mermaid-js.github.io/mermaid/)
+
+This section provides direct links to all tools and vendors mentioned in the documentation, making it easier for developers to access the resources they need. 
