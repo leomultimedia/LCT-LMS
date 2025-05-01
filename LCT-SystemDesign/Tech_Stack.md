@@ -962,148 +962,191 @@ This document outlines the comprehensive technology stack used in the LCT Learni
   - Business continuity
   - Incident response
 
-### Free Tier Limitations & Upgrade Paths
+## Free Tier Limitations & Upgrade Paths
 
-#### Core Services Limitations
+### Frontend Technologies
 
-##### Hosting & Compute
+#### Web Application
 | Service | Free Tier Limit | Upgrade Path | Cost Impact |
 |---------|----------------|--------------|-------------|
-| **GitHub Pages** | 1GB storage<br>100GB bandwidth/month<br>10 builds/hour | → GitHub Pro ($4/user/month) | +$4/user/month |
-| **Azure Static Web Apps** | 100GB bandwidth/month<br>100 builds/month | → Standard ($9/month) | +$9/month |
-| **Azure App Service** | 1GB memory<br>1 CPU core<br>60 minutes/day | → Basic ($13/month) | +$13/month |
-| **Azure Functions** | 1M requests/month<br>400,000 GB-s | → Premium ($0.20/GB-s) | Usage-based |
+| **React.js** | Open Source | Enterprise Support | Custom pricing |
+| **Next.js** | Open Source | Vercel Pro ($20/month) | +$20/month |
+| **Material-UI** | Open Source | MUI X Pro ($15/month) | +$15/month |
+| **Tailwind CSS** | Open Source | Tailwind UI ($249) | One-time fee |
 
-##### Database Services
+#### Mobile Application
 | Service | Free Tier Limit | Upgrade Path | Cost Impact |
 |---------|----------------|--------------|-------------|
-| **Azure SQL Database** | 250GB storage<br>5 DTUs | → Standard S0 ($15/month) | +$15/month |
-| **Azure Cosmos DB** | 1000 RU/s<br>25GB storage | → Standard ($24/month) | +$24/month |
-| **Azure Database for PostgreSQL** | 32GB storage<br>Basic tier | → General Purpose ($0.12/hour) | Usage-based |
+| **React Native** | Open Source | Enterprise Support | Custom pricing |
+| **React Navigation** | Open Source | Premium Support | $100/month |
+| **AsyncStorage** | Open Source | Enterprise Features | Custom pricing |
+| **Firebase Cloud Messaging** | 500 devices | Blaze Plan | Usage-based |
 
-##### Storage Services
+### Backend Technologies
+
+#### Core Server
 | Service | Free Tier Limit | Upgrade Path | Cost Impact |
 |---------|----------------|--------------|-------------|
-| **Azure Blob Storage** | 5GB LRS<br>20,000 read ops<br>10,000 write ops | → Hot ($0.0184/GB) | Usage-based |
-| **Azure Files** | 5GB<br>Limited operations | → Standard ($0.06/GB) | Usage-based |
-| **GitHub Storage** | 1GB LFS<br>500MB packages | → GitHub Pro | +$4/user/month |
+| **Node.js** | Open Source | Enterprise Support | Custom pricing |
+| **NestJS** | Open Source | Enterprise Support | Custom pricing |
+| **GraphQL** | Open Source | Apollo Studio | $99/month |
+| **Passport.js** | Open Source | Enterprise Support | Custom pricing |
 
-#### Development Tools Limitations
-
-##### Version Control & CI/CD
+#### Database Layer
 | Service | Free Tier Limit | Upgrade Path | Cost Impact |
 |---------|----------------|--------------|-------------|
-| **GitHub Free** | 2000 minutes/month<br>Private repos only | → GitHub Team ($4/user/month) | +$4/user/month |
-| **Azure DevOps** | 5 users<br>Basic features | → Basic ($6/user/month) | +$6/user/month |
-| **GitHub Actions** | 2000 minutes/month | → GitHub Pro | +$4/user/month |
+| **PostgreSQL** | Open Source | Enterprise Support | Custom pricing |
+| **MongoDB Atlas** | 512MB storage | M10 ($57/month) | +$57/month |
+| **Redis** | Open Source | Redis Enterprise | $100/month |
 
-##### Monitoring & Analytics
+#### Search Engine
 | Service | Free Tier Limit | Upgrade Path | Cost Impact |
 |---------|----------------|--------------|-------------|
-| **Application Insights** | 5GB data/month<br>Basic metrics | → Pay-as-you-go ($2.30/GB) | Usage-based |
-| **Azure Monitor** | Basic metrics only | → Standard ($0.10/GB) | Usage-based |
-| **Power BI** | 1GB/user<br>Limited refresh | → Pro ($10/user/month) | +$10/user/month |
+| **Elasticsearch** | Open Source | Elastic Cloud | $95/month |
+| **Algolia** | 10k records | Standard ($29/month) | +$29/month |
 
-### Cost Comparison Scenarios
+### DevOps & Infrastructure
 
-#### Scenario 1: Small Team (1-5 Users)
-| Component | Free Tier | Basic Tier | Cost Impact |
-|-----------|-----------|------------|-------------|
-| **Hosting** | GitHub Pages | Azure Static Web Apps | +$9/month |
-| **Backend** | Node.js (Local) | Azure App Service | +$13/month |
-| **Database** | SQLite | Azure SQL Basic | +$15/month |
-| **Storage** | GitHub Storage | Azure Blob Storage | +$5/month |
-| **Total Monthly** | $0 | $42 | +$42/month |
+#### Cloud Infrastructure
+| Service | Free Tier Limit | Upgrade Path | Cost Impact |
+|---------|----------------|--------------|-------------|
+| **AWS ECS** | 750 hours/month | On-demand | $0.004/hour |
+| **AWS RDS** | 750 hours/month | On-demand | $0.017/hour |
+| **AWS DocumentDB** | 750 hours/month | On-demand | $0.023/hour |
+| **AWS ElastiCache** | 750 hours/month | On-demand | $0.022/hour |
 
-#### Scenario 2: Growing Team (5-20 Users)
-| Component | Free Tier | Growth Tier | Cost Impact |
-|-----------|-----------|-------------|-------------|
-| **Hosting** | GitHub Pages | Azure App Service | +$73/month |
-| **Backend** | Node.js (Local) | Azure App Service | +$73/month |
-| **Database** | SQLite | Azure SQL Standard | +$75/month |
-| **Storage** | GitHub Storage | Azure Blob Storage | +$20/month |
-| **Monitoring** | Basic | Application Insights | +$10/month |
-| **Total Monthly** | $0 | $251 | +$251/month |
+#### CI/CD Pipeline
+| Service | Free Tier Limit | Upgrade Path | Cost Impact |
+|---------|----------------|--------------|-------------|
+| **GitHub Actions** | 2000 minutes/month | GitHub Pro | +$4/user/month |
+| **Docker Hub** | 100 pulls/6 hours | Pro ($5/month) | +$5/month |
+| **Terraform** | Open Source | Terraform Cloud | $20/user/month |
+| **Ansible** | Open Source | Red Hat Ansible | $10,000/year |
 
-#### Scenario 3: Enterprise Team (20+ Users)
-| Component | Free Tier | Enterprise Tier | Cost Impact |
-|-----------|-----------|-----------------|-------------|
-| **Hosting** | GitHub Pages | Azure Kubernetes | +$300/month |
-| **Backend** | Node.js (Local) | Azure App Service Premium | +$200/month |
-| **Database** | SQLite | Azure SQL Premium | +$500/month |
-| **Storage** | GitHub Storage | Azure Premium Storage | +$100/month |
-| **Monitoring** | Basic | Azure Monitor + Insights | +$50/month |
-| **Security** | Basic | Azure Security Center | +$100/month |
-| **Total Monthly** | $0 | $1,250 | +$1,250/month |
+### Media Processing
 
-### Upgrade Triggers & Recommendations
+#### Video Conferencing
+| Service | Free Tier Limit | Upgrade Path | Cost Impact |
+|---------|----------------|--------------|-------------|
+| **BigBlueButton** | Open Source | Enterprise Support | Custom pricing |
+| **FFmpeg** | Open Source | Enterprise Support | Custom pricing |
+| **AWS MediaConvert** | 30 minutes/month | On-demand | $0.0075/minute |
 
-#### Performance Triggers
-| Metric | Free Tier Limit | Upgrade Recommendation |
-|--------|----------------|------------------------|
-| **Response Time** | > 500ms | Upgrade compute resources |
-| **Storage Usage** | > 80% capacity | Scale storage tier |
-| **Database Load** | > 70% DTUs | Upgrade database tier |
-| **Bandwidth** | > 80% quota | Upgrade hosting plan |
+#### Content Delivery
+| Service | Free Tier Limit | Upgrade Path | Cost Impact |
+|---------|----------------|--------------|-------------|
+| **AWS S3** | 5GB storage | Standard | $0.023/GB |
+| **AWS CloudFront** | 1TB transfer | Standard | $0.085/GB |
+| **HLS/DASH** | Open Source | Enterprise Support | Custom pricing |
 
-#### Business Triggers
-| Metric | Free Tier Limit | Upgrade Recommendation |
-|--------|----------------|------------------------|
-| **Active Users** | > 100 | Upgrade authentication |
-| **Data Volume** | > 1GB/day | Upgrade storage tier |
-| **API Calls** | > 10,000/day | Upgrade backend services |
-| **Concurrent Users** | > 50 | Upgrade compute resources |
+### Integration & APIs
 
-### Cost Optimization Strategies
+#### External Services
+| Service | Free Tier Limit | Upgrade Path | Cost Impact |
+|---------|----------------|--------------|-------------|
+| **Stripe** | $1M volume/year | Standard | 2.9% + $0.30 |
+| **AWS SES** | 62,000 emails/month | On-demand | $0.10/1000 |
+| **Twilio** | Trial credits | Pay-as-you-go | $0.0075/SMS |
+| **Google Analytics** | Free tier | GA4 360 | $150,000/year |
 
-#### Immediate Savings
-1. **Right-Size Resources**
-   - Monitor usage patterns
-   - Scale down during off-peak
-   - Use auto-scaling
-   - Implement caching
+#### API Management
+| Service | Free Tier Limit | Upgrade Path | Cost Impact |
+|---------|----------------|--------------|-------------|
+| **AWS API Gateway** | 1M requests/month | Standard | $1.00/million |
+| **WebSocket** | Open Source | Enterprise Support | Custom pricing |
+| **OpenAPI** | Open Source | Enterprise Support | Custom pricing |
 
-2. **Reserved Instances**
-   - 1-year commitment: 30% savings
-   - 3-year commitment: 60% savings
-   - Convertible options available
-   - Flexible instance sizes
+### Development Tools
 
-#### Long-term Savings
-1. **Architecture Optimization**
-   - Implement microservices
-   - Use serverless where possible
-   - Optimize data storage
-   - Implement CDN
+#### IDE & Editors
+| Service | Free Tier Limit | Upgrade Path | Cost Impact |
+|---------|----------------|--------------|-------------|
+| **VS Code** | Open Source | Enterprise Support | Custom pricing |
+| **ESLint** | Open Source | Enterprise Support | Custom pricing |
+| **Prettier** | Open Source | Enterprise Support | Custom pricing |
+| **GitLens** | Free tier | Pro ($8/month) | +$8/month |
 
-2. **Operational Efficiency**
-   - Automate deployments
-   - Implement monitoring
-   - Use managed services
-   - Regular cost reviews
+#### Testing Tools
+| Service | Free Tier Limit | Upgrade Path | Cost Impact |
+|---------|----------------|--------------|-------------|
+| **Jest** | Open Source | Enterprise Support | Custom pricing |
+| **Cypress** | Open Source | Cypress Cloud | $75/month |
+| **Postman** | Free tier | Team ($12/user/month) | +$12/user/month |
+| **k6** | Open Source | k6 Cloud | $99/month |
 
-### Break-even Analysis
+### Monitoring & Analytics
 
-#### Small Team (1-5 Users)
-| Metric | Free Tier | Paid Tier | Break-even Point |
-|--------|-----------|-----------|------------------|
-| **Monthly Cost** | $0 | $42 | 100 active users |
-| **Development Time** | 2x | 1x | 3 months |
-| **Maintenance** | High | Low | 6 months |
-| **Total ROI** | - | 200% | 12 months |
+#### System Monitoring
+| Service | Free Tier Limit | Upgrade Path | Cost Impact |
+|---------|----------------|--------------|-------------|
+| **New Relic** | 100GB/month | Pro | $99/instance |
+| **ELK Stack** | Open Source | Elastic Cloud | $95/month |
+| **Prometheus** | Open Source | Enterprise Support | Custom pricing |
+| **Sentry** | 5k errors/month | Team ($29/user/month) | +$29/user/month |
 
-#### Growing Team (5-20 Users)
-| Metric | Free Tier | Paid Tier | Break-even Point |
-|--------|-----------|-----------|------------------|
-| **Monthly Cost** | $0 | $251 | 500 active users |
-| **Development Time** | 3x | 1x | 2 months |
-| **Maintenance** | Very High | Medium | 4 months |
-| **Total ROI** | - | 300% | 9 months |
+#### Business Analytics
+| Service | Free Tier Limit | Upgrade Path | Cost Impact |
+|---------|----------------|--------------|-------------|
+| **Metabase** | Open Source | Pro ($500/month) | +$500/month |
+| **Amazon Redshift** | 750 hours/month | On-demand | $0.25/hour |
+| **Apache Airflow** | Open Source | Astronomer | $10/month |
+| **Power BI** | Free tier | Pro ($10/user/month) | +$10/user/month |
 
-#### Enterprise Team (20+ Users)
-| Metric | Free Tier | Paid Tier | Break-even Point |
-|--------|-----------|-----------|------------------|
-| **Monthly Cost** | $0 | $1,250 | 2000 active users |
-| **Development Time** | 4x | 1x | 1 month |
-| **Maintenance** | Critical | Low | 3 months |
-| **Total ROI** | - | 400% | 6 months |
+### Compliance & Standards
+
+#### Security Tools
+| Service | Free Tier Limit | Upgrade Path | Cost Impact |
+|---------|----------------|--------------|-------------|
+| **Auth0** | 7,000 users | Professional | $0.07/user |
+| **Snyk** | Open Source | Team ($25/user/month) | +$25/user/month |
+| **SonarQube** | Open Source | Enterprise | $150/instance |
+| **AWS WAF** | Free tier | Standard | $5/rule |
+
+#### Compliance Tools
+| Service | Free Tier Limit | Upgrade Path | Cost Impact |
+|---------|----------------|--------------|-------------|
+| **NIST Compliance** | Open Source | Enterprise Support | Custom pricing |
+| **HIPAA Compliance** | Basic | Enterprise Support | Custom pricing |
+| **GDPR Compliance** | Basic | Enterprise Support | Custom pricing |
+| **ISO 27001** | Basic | Enterprise Support | Custom pricing |
+
+### Comprehensive Cost Scenarios
+
+#### Scenario 1: Small Team (1-5 Users) - All Components
+| Category | Free Tier | Basic Tier | Cost Impact |
+|----------|-----------|------------|-------------|
+| **Frontend** | $0 | $35/month | +$35/month |
+| **Backend** | $0 | $100/month | +$100/month |
+| **Database** | $0 | $72/month | +$72/month |
+| **DevOps** | $0 | $50/month | +$50/month |
+| **Media** | $0 | $100/month | +$100/month |
+| **Integration** | $0 | $50/month | +$50/month |
+| **Monitoring** | $0 | $100/month | +$100/month |
+| **Security** | $0 | $50/month | +$50/month |
+| **Total Monthly** | $0 | $557 | +$557/month |
+
+#### Scenario 2: Growing Team (5-20 Users) - All Components
+| Category | Free Tier | Growth Tier | Cost Impact |
+|----------|-----------|-------------|-------------|
+| **Frontend** | $0 | $100/month | +$100/month |
+| **Backend** | $0 | $300/month | +$300/month |
+| **Database** | $0 | $200/month | +$200/month |
+| **DevOps** | $0 | $150/month | +$150/month |
+| **Media** | $0 | $300/month | +$300/month |
+| **Integration** | $0 | $150/month | +$150/month |
+| **Monitoring** | $0 | $300/month | +$300/month |
+| **Security** | $0 | $150/month | +$150/month |
+| **Total Monthly** | $0 | $1,650 | +$1,650/month |
+
+#### Scenario 3: Enterprise Team (20+ Users) - All Components
+| Category | Free Tier | Enterprise Tier | Cost Impact |
+|----------|-----------|-----------------|-------------|
+| **Frontend** | $0 | $500/month | +$500/month |
+| **Backend** | $0 | $1,000/month | +$1,000/month |
+| **Database** | $0 | $800/month | +$800/month |
+| **DevOps** | $0 | $500/month | +$500/month |
+| **Media** | $0 | $1,000/month | +$1,000/month |
+| **Integration** | $0 | $500/month | +$500/month |
+| **Monitoring** | $0 | $1,000/month | +$1,000/month |
+| **Security** | $0 | $500/month | +$500/month |
+| **Total Monthly** | $0 | $5,800 | +$5,800/month |
