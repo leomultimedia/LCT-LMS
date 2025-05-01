@@ -2,6 +2,177 @@
 
 [🏠 Home](../README.md) > [System Design Documentation](README.md) > Tech Stack
 
+## MVP Selection Guide
+
+### Free & Microsoft Technologies MVP Stack
+
+#### Core Infrastructure
+| Component | Free Option | Microsoft Option | Advantages |
+|-----------|-------------|------------------|------------|
+| **Hosting** | [GitHub Pages](https://pages.github.com/) | [Azure Static Web Apps](https://azure.microsoft.com/services/app-service/static/) | - Free hosting for static sites<br>- Built-in CI/CD<br>- Global CDN<br>- SSL included |
+| **Backend** | [Node.js](https://nodejs.org/) | [Azure App Service](https://azure.microsoft.com/services/app-service/) | - Free tier available<br>- Easy deployment<br>- Auto-scaling<br>- Built-in monitoring |
+| **Database** | [SQLite](https://www.sqlite.org/) | [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) | - Free for development<br>- Managed service<br>- Automatic backups<br>- High availability |
+| **Storage** | [GitHub Storage](https://docs.github.com/repositories/working-with-files/managing-large-files/about-git-large-file-storage) | [Azure Blob Storage](https://azure.microsoft.com/services/storage/blobs/) | - Free for small files<br>- Global distribution<br>- CDN integration<br>- Secure access |
+
+#### Development Tools
+| Component | Free Option | Microsoft Option | Advantages |
+|-----------|-------------|------------------|------------|
+| **IDE** | [VS Code](https://code.visualstudio.com/) | [Visual Studio Community](https://visualstudio.microsoft.com/vs/community/) | - Free and powerful<br>- Extensive extensions<br>- Git integration<br>- Debugging tools |
+| **Version Control** | [GitHub Free](https://github.com/) | [Azure DevOps](https://azure.microsoft.com/services/devops/) | - Free private repos<br>- CI/CD pipelines<br>- Project management<br>- Code review |
+| **Testing** | [Jest](https://jestjs.io/) | [Azure Test Plans](https://azure.microsoft.com/services/devops/test-plans/) | - Free testing framework<br>- Test automation<br>- Coverage reports<br>- Integration testing |
+
+#### Authentication & Security
+| Component | Free Option | Microsoft Option | Advantages |
+|-----------|-------------|------------------|------------|
+| **Auth** | [Auth0 Free Tier](https://auth0.com/) | [Azure AD Free](https://azure.microsoft.com/services/active-directory/) | - Up to 7,000 users<br>- SSO support<br>- MFA included<br>- Security monitoring |
+| **SSL** | [Let's Encrypt](https://letsencrypt.org/) | [Azure App Service SSL](https://azure.microsoft.com/services/app-service/) | - Free certificates<br>- Auto-renewal<br>- Wildcard support<br>- Managed service |
+
+#### Monitoring & Analytics
+| Component | Free Option | Microsoft Option | Advantages |
+|-----------|-------------|------------------|------------|
+| **Monitoring** | [Application Insights Free](https://docs.microsoft.com/azure/azure-monitor/app/pricing) | [Azure Monitor](https://azure.microsoft.com/services/monitor/) | - Free basic tier<br>- Real-time monitoring<br>- Alerting<br>- Performance insights |
+| **Analytics** | [Power BI Free](https://powerbi.microsoft.com/) | [Azure Synapse Analytics](https://azure.microsoft.com/services/synapse-analytics/) | - Free for personal use<br>- Interactive reports<br>- Data visualization<br>- AI insights |
+
+### MVP Architecture Benefits
+
+#### Cost Efficiency
+1. **Zero Initial Investment**
+   - Free tier services
+   - No upfront costs
+   - Pay-as-you-grow model
+   - Predictable expenses
+
+2. **Scalable Pricing**
+   - Gradual cost increase
+   - Usage-based billing
+   - No long-term commitments
+   - Easy to upgrade
+
+#### Development Speed
+1. **Rapid Setup**
+   - Pre-configured services
+   - Quick deployment
+   - Built-in templates
+   - Automated processes
+
+2. **Integrated Tools**
+   - Seamless integration
+   - Unified dashboard
+   - Consistent experience
+   - Reduced complexity
+
+#### Security & Compliance
+1. **Enterprise-Grade Security**
+   - Built-in security
+   - Regular updates
+   - Compliance certifications
+   - Data protection
+
+2. **Managed Services**
+   - Automatic patching
+   - Backup solutions
+   - Disaster recovery
+   - Monitoring tools
+
+#### Support & Documentation
+1. **Comprehensive Support**
+   - Free documentation
+   - Community support
+   - Learning resources
+   - Sample code
+
+2. **Microsoft Ecosystem**
+   - Extensive documentation
+   - Active community
+   - Regular updates
+   - Training resources
+
+### MVP Implementation Guide
+
+#### Phase 1: Foundation (Week 1-2)
+1. **Setup Core Services**
+   - Create Azure account
+   - Set up GitHub repository
+   - Configure development environment
+   - Initialize database
+
+2. **Basic Infrastructure**
+   - Deploy static web app
+   - Set up authentication
+   - Configure storage
+   - Implement monitoring
+
+#### Phase 2: Development (Week 3-6)
+1. **Core Features**
+   - User management
+   - Course structure
+   - Basic content delivery
+   - Simple assessments
+
+2. **Integration**
+   - Authentication flow
+   - Database operations
+   - File storage
+   - Basic analytics
+
+#### Phase 3: Testing & Launch (Week 7-8)
+1. **Quality Assurance**
+   - Unit testing
+   - Integration testing
+   - Performance testing
+   - Security testing
+
+2. **Deployment**
+   - Production setup
+   - Monitoring configuration
+   - Backup strategy
+   - Launch preparation
+
+### Scaling Strategy
+
+#### Growth Path
+1. **User Growth**
+   - 0-100: Free tier
+   - 100-1000: Basic paid tier
+   - 1000+: Enterprise tier
+
+2. **Feature Expansion**
+   - Basic → Advanced features
+   - Single → Multi-tenant
+   - Simple → Complex analytics
+   - Manual → Automated processes
+
+#### Cost Optimization
+1. **Resource Management**
+   - Right-size services
+   - Implement caching
+   - Optimize queries
+   - Use reserved instances
+
+2. **Performance Tuning**
+   - CDN optimization
+   - Database indexing
+   - Code optimization
+   - Load balancing
+
+### Success Metrics
+
+#### Technical Metrics
+| Metric | Target | Measurement |
+|--------|--------|-------------|
+| **Uptime** | 99.9% | Azure Monitor |
+| **Response Time** | < 200ms | Application Insights |
+| **Error Rate** | < 0.1% | Error tracking |
+| **Load Time** | < 2s | Performance monitoring |
+
+#### Business Metrics
+| Metric | Target | Measurement |
+|--------|--------|-------------|
+| **User Growth** | 20% MoM | Analytics dashboard |
+| **Engagement** | 60% DAU | User analytics |
+| **Conversion** | 30% | Funnel analysis |
+| **Retention** | 80% | Cohort analysis |
+
 ## Overview
 This document outlines the comprehensive technology stack used in the LCT Learning Management System. The stack has been carefully chosen to ensure scalability, maintainability, and optimal performance while meeting all security and compliance requirements.
 
@@ -790,3 +961,149 @@ This document outlines the comprehensive technology stack used in the LCT Learni
   - Recovery plans
   - Business continuity
   - Incident response
+
+### Free Tier Limitations & Upgrade Paths
+
+#### Core Services Limitations
+
+##### Hosting & Compute
+| Service | Free Tier Limit | Upgrade Path | Cost Impact |
+|---------|----------------|--------------|-------------|
+| **GitHub Pages** | 1GB storage<br>100GB bandwidth/month<br>10 builds/hour | → GitHub Pro ($4/user/month) | +$4/user/month |
+| **Azure Static Web Apps** | 100GB bandwidth/month<br>100 builds/month | → Standard ($9/month) | +$9/month |
+| **Azure App Service** | 1GB memory<br>1 CPU core<br>60 minutes/day | → Basic ($13/month) | +$13/month |
+| **Azure Functions** | 1M requests/month<br>400,000 GB-s | → Premium ($0.20/GB-s) | Usage-based |
+
+##### Database Services
+| Service | Free Tier Limit | Upgrade Path | Cost Impact |
+|---------|----------------|--------------|-------------|
+| **Azure SQL Database** | 250GB storage<br>5 DTUs | → Standard S0 ($15/month) | +$15/month |
+| **Azure Cosmos DB** | 1000 RU/s<br>25GB storage | → Standard ($24/month) | +$24/month |
+| **Azure Database for PostgreSQL** | 32GB storage<br>Basic tier | → General Purpose ($0.12/hour) | Usage-based |
+
+##### Storage Services
+| Service | Free Tier Limit | Upgrade Path | Cost Impact |
+|---------|----------------|--------------|-------------|
+| **Azure Blob Storage** | 5GB LRS<br>20,000 read ops<br>10,000 write ops | → Hot ($0.0184/GB) | Usage-based |
+| **Azure Files** | 5GB<br>Limited operations | → Standard ($0.06/GB) | Usage-based |
+| **GitHub Storage** | 1GB LFS<br>500MB packages | → GitHub Pro | +$4/user/month |
+
+#### Development Tools Limitations
+
+##### Version Control & CI/CD
+| Service | Free Tier Limit | Upgrade Path | Cost Impact |
+|---------|----------------|--------------|-------------|
+| **GitHub Free** | 2000 minutes/month<br>Private repos only | → GitHub Team ($4/user/month) | +$4/user/month |
+| **Azure DevOps** | 5 users<br>Basic features | → Basic ($6/user/month) | +$6/user/month |
+| **GitHub Actions** | 2000 minutes/month | → GitHub Pro | +$4/user/month |
+
+##### Monitoring & Analytics
+| Service | Free Tier Limit | Upgrade Path | Cost Impact |
+|---------|----------------|--------------|-------------|
+| **Application Insights** | 5GB data/month<br>Basic metrics | → Pay-as-you-go ($2.30/GB) | Usage-based |
+| **Azure Monitor** | Basic metrics only | → Standard ($0.10/GB) | Usage-based |
+| **Power BI** | 1GB/user<br>Limited refresh | → Pro ($10/user/month) | +$10/user/month |
+
+### Cost Comparison Scenarios
+
+#### Scenario 1: Small Team (1-5 Users)
+| Component | Free Tier | Basic Tier | Cost Impact |
+|-----------|-----------|------------|-------------|
+| **Hosting** | GitHub Pages | Azure Static Web Apps | +$9/month |
+| **Backend** | Node.js (Local) | Azure App Service | +$13/month |
+| **Database** | SQLite | Azure SQL Basic | +$15/month |
+| **Storage** | GitHub Storage | Azure Blob Storage | +$5/month |
+| **Total Monthly** | $0 | $42 | +$42/month |
+
+#### Scenario 2: Growing Team (5-20 Users)
+| Component | Free Tier | Growth Tier | Cost Impact |
+|-----------|-----------|-------------|-------------|
+| **Hosting** | GitHub Pages | Azure App Service | +$73/month |
+| **Backend** | Node.js (Local) | Azure App Service | +$73/month |
+| **Database** | SQLite | Azure SQL Standard | +$75/month |
+| **Storage** | GitHub Storage | Azure Blob Storage | +$20/month |
+| **Monitoring** | Basic | Application Insights | +$10/month |
+| **Total Monthly** | $0 | $251 | +$251/month |
+
+#### Scenario 3: Enterprise Team (20+ Users)
+| Component | Free Tier | Enterprise Tier | Cost Impact |
+|-----------|-----------|-----------------|-------------|
+| **Hosting** | GitHub Pages | Azure Kubernetes | +$300/month |
+| **Backend** | Node.js (Local) | Azure App Service Premium | +$200/month |
+| **Database** | SQLite | Azure SQL Premium | +$500/month |
+| **Storage** | GitHub Storage | Azure Premium Storage | +$100/month |
+| **Monitoring** | Basic | Azure Monitor + Insights | +$50/month |
+| **Security** | Basic | Azure Security Center | +$100/month |
+| **Total Monthly** | $0 | $1,250 | +$1,250/month |
+
+### Upgrade Triggers & Recommendations
+
+#### Performance Triggers
+| Metric | Free Tier Limit | Upgrade Recommendation |
+|--------|----------------|------------------------|
+| **Response Time** | > 500ms | Upgrade compute resources |
+| **Storage Usage** | > 80% capacity | Scale storage tier |
+| **Database Load** | > 70% DTUs | Upgrade database tier |
+| **Bandwidth** | > 80% quota | Upgrade hosting plan |
+
+#### Business Triggers
+| Metric | Free Tier Limit | Upgrade Recommendation |
+|--------|----------------|------------------------|
+| **Active Users** | > 100 | Upgrade authentication |
+| **Data Volume** | > 1GB/day | Upgrade storage tier |
+| **API Calls** | > 10,000/day | Upgrade backend services |
+| **Concurrent Users** | > 50 | Upgrade compute resources |
+
+### Cost Optimization Strategies
+
+#### Immediate Savings
+1. **Right-Size Resources**
+   - Monitor usage patterns
+   - Scale down during off-peak
+   - Use auto-scaling
+   - Implement caching
+
+2. **Reserved Instances**
+   - 1-year commitment: 30% savings
+   - 3-year commitment: 60% savings
+   - Convertible options available
+   - Flexible instance sizes
+
+#### Long-term Savings
+1. **Architecture Optimization**
+   - Implement microservices
+   - Use serverless where possible
+   - Optimize data storage
+   - Implement CDN
+
+2. **Operational Efficiency**
+   - Automate deployments
+   - Implement monitoring
+   - Use managed services
+   - Regular cost reviews
+
+### Break-even Analysis
+
+#### Small Team (1-5 Users)
+| Metric | Free Tier | Paid Tier | Break-even Point |
+|--------|-----------|-----------|------------------|
+| **Monthly Cost** | $0 | $42 | 100 active users |
+| **Development Time** | 2x | 1x | 3 months |
+| **Maintenance** | High | Low | 6 months |
+| **Total ROI** | - | 200% | 12 months |
+
+#### Growing Team (5-20 Users)
+| Metric | Free Tier | Paid Tier | Break-even Point |
+|--------|-----------|-----------|------------------|
+| **Monthly Cost** | $0 | $251 | 500 active users |
+| **Development Time** | 3x | 1x | 2 months |
+| **Maintenance** | Very High | Medium | 4 months |
+| **Total ROI** | - | 300% | 9 months |
+
+#### Enterprise Team (20+ Users)
+| Metric | Free Tier | Paid Tier | Break-even Point |
+|--------|-----------|-----------|------------------|
+| **Monthly Cost** | $0 | $1,250 | 2000 active users |
+| **Development Time** | 4x | 1x | 1 month |
+| **Maintenance** | Critical | Low | 3 months |
+| **Total ROI** | - | 400% | 6 months |
